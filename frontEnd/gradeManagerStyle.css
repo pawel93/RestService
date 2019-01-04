@@ -1,0 +1,196 @@
+ .container {
+     max-width: 1020px;
+     margin: auto;
+     display: flex;
+     flex-flow: row wrap;
+ }
+ 
+ .container > * {
+     flex: 1 100%;
+ }
+ 
+ header {
+     background: linear-gradient(to right, rgb(26, 95, 219), rgb(30, 166, 249));
+     padding: 5px;
+     color: white;
+     font-family: sans-serif;
+     border-bottom: 1px solid darkorange;
+ }
+ 
+ footer {
+     background: linear-gradient(rgba(220, 220, 220, 1), rgba(220, 220, 220, 0));
+     font-family: sans-serif;
+     font-size: 0.8em;
+     border-top: 2px solid darkorange;
+     padding-top: 5px;
+     padding-bottom: 10px;
+ }
+ 
+ footer a {
+     text-decoration: none;
+     color: black;
+ }
+ 
+ footer a:hover {
+     color: darkblue;
+     text-decoration: underline;
+ }
+ 
+ table {
+     width: 99%;
+ }
+ 
+ table,
+ td,
+ th {
+     border: 1px solid black;
+     border-collapse: collapse;
+ }
+ 
+ th {
+     text-align: left;
+     background-color: rgb(0, 75, 212);
+     color: white;
+ }
+ 
+ tr:nth-child(even) {
+     background-color: rgba(30, 166, 249, 0.5);
+ }
+ 
+ tr:nth-child(odd) {
+     background-color: rgba(44, 224, 249, 0.5);
+ }
+ 
+ tr:hover {
+     background-color: #f5f5f5;
+ }
+ 
+ ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     font-family: sans-serif;
+     background-color: darkorange;
+ }
+ 
+ ul li a {
+     display: block;
+     padding: 5px;
+     text-decoration: none;
+     color: black;
+     text-align: center;
+ }
+ 
+ ul li a:hover {
+     background-color: orange;
+ }
+ 
+ nav {}
+ 
+ section {
+     padding: 15px;
+     display: none;
+     font-family: sans-serif;
+ }
+ 
+ section:target {
+     display: block;
+ }
+ 
+ td > input,
+ select {
+     width: 100%;
+     box-sizing: border-box;
+     background-color: inherit;
+     border: none;
+     border-bottom: 2px solid dodgerblue;
+     font-family: sans-serif;
+ }
+ 
+ th input[class=search] {
+     width: 10%;
+     box-sizing: border-box;
+     border: none;
+     background-color: rgb(0, 75, 212);
+     color: white;
+     position: absolute;
+     right: 0;
+     top: 0;
+     transition: width 0.4s;
+ }
+ 
+ th input[class=search]:focus {
+     width: 100%;
+ }
+ 
+ div.head {
+     position: relative;
+ }
+ 
+ @media all and (min-width: 800px) {
+     section.main {
+         flex: 1 80%;
+     }
+     nav.aside {
+         flex: 1 auto;
+     }
+ }
+ 
+ @media print {
+     header,
+     footer,
+     nav {
+         display: none;
+     }
+     section {
+         display: block;
+         margin: 0;
+     }
+     table {
+         border: none;
+         width: 100%;
+     }
+     td {
+         border: none;
+         border-bottom: 1px solid black;
+     }
+     th {
+         border: none;
+         border-bottom: 1px solid black;
+         border-top: 1px solid black;
+         color: black;
+         background-color: white;
+     }
+     td input,
+     select {
+         border: none;
+     }
+     select {
+         -webkit-appearance: none;
+         -moz-appearance: none;
+     }
+     th input[class=search] {
+         display: none;
+     }
+     tr:nth-child(even) {
+         background-color: white;
+     }
+     tr:nth-child(odd) {
+         background-color: white;
+     }
+     table tfoot {
+         display: none;
+     }
+     table#student td:nth-of-type(5) {
+         display: none;
+     }
+     table#student th:nth-of-type(5) {
+         display: none;
+     }
+     table.col td:nth-of-type(4) {
+         display: none;
+     }
+     table.col th:nth-of-type(4) {
+         display: none;
+     }
+ }
